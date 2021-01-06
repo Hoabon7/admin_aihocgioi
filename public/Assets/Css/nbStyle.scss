@@ -1,0 +1,155 @@
+﻿/*#region Setting value */
+
+$nbColor0: #fff;
+$nbColor1: #45b6ad;
+$nbColor11: #f00;
+$nbColor2: #32383e;
+$nbColor3: #333;
+
+
+/*#endregion */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nbTable {
+    &.tableMenu {
+        .thead {
+            .tr {
+                .content {
+                    border: 1px solid $nbColor3;
+                    box-sizing: border-box;
+                    background-color: $nbColor2;
+                    border-bottom: 2px solid $nbColor3;
+                    border: 0;
+                    .colTab {
+                        background: transparent;
+                        border: 0;
+                        color: $nbColor0;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        tbody {
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            background-color: $nbColor0;
+        }
+        .tr {
+            display: block;
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+            .content {
+                display: flex;
+                padding: 5px 0;
+                background-color: $nbColor0;
+                &.last-child {
+                    border-bottom: 0;
+                }
+                .stt {
+                    width: 20px;
+                    text-align: center;
+                }
+                .tbAction {
+                    width: 200px;
+                    text-align: center;
+                    .listAction {
+                        display: flex;
+                        justify-content: center;
+                        .actionLink {
+                            display: block;
+                            width: 70px;            
+                            margin: 2px;
+                            border: 1px solid #ccc;
+                            border-radius: 3px;
+                            color: $nbColor3;
+                            background-color: transparent;
+                            .fa {
+                                margin-right: 3px;
+                            }
+                            &:hover {
+                                background-color: $nbColor1;
+                                border-color: $nbColor1;
+                                color: $nbColor0;
+                            }
+                        }
+                    }
+                }
+                .tbActive {
+                    text-align: center;
+                    .isCheck {
+                        .fa {
+                            font-size: 26px;
+                            color: $nbColor1;
+                            &:nth-child(1) {
+                                display: block;
+                            }
+                            &:nth-child(2) {
+                                display: none;
+                            }
+                        }
+                        &.notActive {
+                            .fa {
+                                color: $nbColor11;
+                                &:nth-child(1) {
+                                    display: none;
+                                }
+                                &:nth-child(2) {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-child {
+
+            }
+            &.dropTab {
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    width: 8px;
+                    height: 8px;
+                    border-style: solid;
+                    border-width: 3px;
+                    border-color: #607d8b #607d8b transparent transparent;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    -webkit-transition: all .25s ease;
+                    transition: all .25s ease;
+                }
+                .wapDrop {
+                    display: none;
+                }
+                &.open {
+                    .wapDrop {
+                        display: block;
+                        .content {
+                            border-top: 1px dotted #ddd;
+                            background-color: rgba(255,255,255,.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.menuHeadAction {
+    .fomAddEdit {
+        display: none;
+    }
+    &.openForm {
+        .fomAddEdit {
+            display: block;
+        }
+    }
+}
+.fomAddEdit {
+    margin-top: 15px;
+}
