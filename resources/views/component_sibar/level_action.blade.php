@@ -229,7 +229,7 @@
         $(document).on('click', '.edit', function() {
             var id_level = $(this).attr('id');
             $.ajax({
-                "url": '{!!  url("admin/editlevel/") !!}/' + id_level,
+                "url": '{!!  url("editlevel/") !!}/' + id_level,
                 "type": "GET",
                 "dataType": "JSON",
                 success: function(data) {

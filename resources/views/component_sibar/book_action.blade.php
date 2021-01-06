@@ -188,7 +188,7 @@
         $(document).on('click','.edit',function(){
             var id_book=$(this).attr('id');
 			$.ajax({
-				"url": '{!! url("/admin/editbook/") !!}/' + id_book,
+				"url": '{!! url("editbook/") !!}/' + id_book,
                 "type": "GET",
                 "dataType": "JSON",
 				success:function(data){

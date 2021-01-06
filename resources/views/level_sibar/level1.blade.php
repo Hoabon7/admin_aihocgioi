@@ -282,7 +282,7 @@
             var id_content=$(this).attr('id');
             //alert(id_content);    
             $.ajax({
-				"url": '{!! url("admin/editlevelchaptercontent/") !!}/' + id_content,
+				"url": '{!! url("editlevelchaptercontent/") !!}/' + id_content,
                 "type": "GET",
                 "dataType": "JSON",
 				success:function(data){

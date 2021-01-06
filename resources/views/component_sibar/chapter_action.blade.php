@@ -180,7 +180,7 @@
         $(document).on('click', '.edit', function() {
             var id_chapter = $(this).attr('id');
             $.ajax({
-                "url": '{!!  url("/admin/editchapter/") !!}/' + id_chapter,
+                "url": '{!!  url('editchapter/') !!}/' + id_chapter,
                 "type": "GET",
                 "dataType": "JSON",
                 success: function(data) {
