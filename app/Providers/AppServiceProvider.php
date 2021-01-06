@@ -23,6 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('url_root', 'http://127.0.0.1:8000');
+        View::share('url_root', 'http://45.63.5.77/admin/public');
     }
 }
