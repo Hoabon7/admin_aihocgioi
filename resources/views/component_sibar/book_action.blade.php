@@ -125,10 +125,10 @@
                                                         <<</span></a>
                                                 @for ($i = $data_book->currentPage() - 1; $i <= $data_book->lastPage(); $i++)
                                                     @if ($i == $data_book->currentPage())
-                                                        <a href="http://127.0.0.1:8000/book_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/book_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/book_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/book_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor
@@ -137,10 +137,10 @@
                                             @if ($data_book->currentPage() == 1)
                                                 @for ($i = $data_book->currentPage(); $i < $lastPage; $i++)
                                                     @if ($i == $data_book->currentPage())
-                                                        <a href="http://127.0.0.1:8000/book_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/book_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/book_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/book_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor

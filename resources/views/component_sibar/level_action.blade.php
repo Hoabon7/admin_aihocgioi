@@ -155,23 +155,23 @@
                                             @if ($data_level->currentPage() - 2 < 0)
                                                 @for ($i = $data_level->currentPage(); $i <= $data_level->lastPage(); $i++)
                                                     @if ($i == $data_level->currentPage())
-                                                        <a href="http://127.0.0.1:8000/level_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/level_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/level_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/level_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor
                                             @else
-                                                <a href="http://127.0.0.1:8000/level_action.html?page=1"><span
+                                                <a href="{{$url_root}}/level_action.html?page=1"><span
                                                         class="btn btn-info btn-sm">
-                                                        <<< /span></a>
+                                                        << </span></a>
                                                 @for ($i = $data_level->currentPage() - 1; $i <= $data_level->lastPage(); $i++)
                                                     @if ($i == $data_level->currentPage())
-                                                        <a href="http://127.0.0.1:8000/level_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/level_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/level_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/level_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor
@@ -181,32 +181,32 @@
                                             @if ($data_level->currentPage() == 1)
                                                 @for ($i = $data_level->currentPage(); $i < $lastPage; $i++)
                                                     @if ($i == $data_level->currentPage())
-                                                        <a href="http://127.0.0.1:8000/level_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/level_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/level_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/level_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor
                                                 <a
-                                                    href="http://127.0.0.1:8000/level_action.html?page={{ $data_level->lastPage() }}"><span
+                                                    href="{{$url_root}}/level_action.html?page={{ $data_level->lastPage() }}"><span
                                                         class="btn btn-info btn-sm">>></span></a>
                                             @else
-                                                <a href="http://127.0.0.1:8000/level_action.html?page=1"><span
+                                                <a href="{{$url_root}}/level_action.html?page=1"><span
                                                         class="btn btn-info btn-sm">
                                                         <<< /span></a>
                                                 @for ($i = $data_level->currentPage() - 1; $i < $lastPage; $i++)
                                                     @if ($i == $data_level->currentPage())
-                                                        <a href="http://127.0.0.1:8000/level_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/level_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/level_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/level_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
 
                                                 @endfor
                                                 <a
-                                                    href="http://127.0.0.1:8000/level_action.html?page={{ $data_level->lastPage() }}"><span
+                                                    href="{{$url_root}}/level_action.html?page={{ $data_level->lastPage() }}"><span
                                                         class="btn btn-info btn-sm">>></span></a>
                                             @endif
                                         @endif

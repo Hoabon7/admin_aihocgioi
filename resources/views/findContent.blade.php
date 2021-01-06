@@ -222,23 +222,23 @@
                                                 @if ($data_level1->currentPage() - 2 < 0)
                                                     @for ($i = $data_level1->currentPage(); $i <= $data_level1->lastPage(); $i++)
                                                         @if ($i == $data_level1->currentPage())
-                                                            <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
+                                                            <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
                                                                     class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                         @else
-                                                            <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
+                                                            <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
                                                                     class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                         @endif
                                                     @endfor
                                                 @else
-                                                    <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page=1"><span
+                                                    <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page=1"><span
                                                             class="btn btn-info btn-sm">
                                                             <<</span></a>
                                                     @for ($i = $data_level1->currentPage() - 1; $i <= $data_level1->lastPage(); $i++)
                                                         @if ($i == $data_level1->currentPage())
-                                                            <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
+                                                            <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
                                                                     class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                         @else
-                                                            <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
+                                                            <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
                                                                     class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                         @endif
                                                     @endfor
@@ -247,32 +247,32 @@
                                                 @if ($data_level1->currentPage() == 1)
                                                     @for ($i = $data_level1->currentPage(); $i < $lastPage; $i++)
                                                         @if ($i == $data_level1->currentPage())
-                                                            <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
+                                                            <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
                                                                     class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                         @else
-                                                            <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
+                                                            <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
                                                                     class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                         @endif
                                                     @endfor
                                                     <a
-                                                        href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $data_level1->lastPage() }}"><span
+                                                        href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $data_level1->lastPage() }}"><span
                                                             class="btn btn-info btn-sm">>></span></a>
                                                 @else
-                                                    <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page=1"><span
+                                                    <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page=1"><span
                                                             class="btn btn-info btn-sm">
                                                             <<</span></a>
                                                     @for ($i = $data_level1->currentPage() - 1; $i < $lastPage; $i++)
                                                         @if ($i == $data_level1->currentPage())
-                                                            <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
+                                                            <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
                                                                     class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                         @else
-                                                            <a href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
+                                                            <a href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $i }}"><span
                                                                     class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                         @endif
 
                                                     @endfor
                                                     <a
-                                                        href="http://127.0.0.1:8000/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $data_level1->lastPage() }}"><span
+                                                        href="{{$url_root}}/filecontent?selectBook={{$data['id_book']}}&selectChapter={{$data['id_chapter']}}&id_level={{$data['id_level']}}&page={{ $data_level1->lastPage() }}"><span
                                                             class="btn btn-info btn-sm">>></span></a>
                                                 @endif
                                             @endif
