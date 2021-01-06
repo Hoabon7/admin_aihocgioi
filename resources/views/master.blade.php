@@ -32,27 +32,27 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true"> <i class="menu-icon fa fa-star-o"></i>Quản Lý Đầu Sách</a>
                         <ul class="sub-menu children dropdown-menu show">
-                            <li><i class="fa fa-gavel"></i><a href="/level_action.html">Phân Loại Lớp Học</a></li>
-                            <li><i class="fa fa-bullhorn"></i><a href="/book_action.html">Phân Loại Sách</a></li>
-                            <li><i class="fa fa-bullhorn"></i><a href="/chapter_action.html">Phân Loại Chương</a></li>
+                            <li><i class="fa fa-gavel"></i><a href="/admin/level_action.html">Phân Loại Lớp Học</a></li>
+                            <li><i class="fa fa-bullhorn"></i><a href="/admin/book_action.html">Phân Loại Sách</a></li>
+                            <li><i class="fa fa-bullhorn"></i><a href="/admin/chapter_action.html">Phân Loại Chương</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown show">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true"> <i class="menu-icon fa fa-book"></i>Nội Dung Theo Lớp</a>
                         <ul class="sub-menu children dropdown-menu show">
-                            <li><i class="fa fa-users"></i><a href="/level.html/lop1">Lớp 1</a></li>
-                            <li><i class="fa fa-sitemap"></i><a href="/level.html/lop2">Lớp 2</a></li>
-                            <li><i class="fa fa-users"></i><a href="/level.html/lop3">Lớp 3</a></li>
-                            <li><i class="fa fa-sitemap"></i><a href="/level.html/lop4">Lớp 4</a></li>
-                            <li><i class="fa fa-users"></i><a href="/level.html/lop5">Lớp 5</a></li>
-                            <li><i class="fa fa-sitemap"></i><a href="/level.html/lop6">Lớp 6</a></li>
-                            <li><i class="fa fa-users"></i><a href="/level.html/lop7">Lớp 7</a></li>
-                            <li><i class="fa fa-sitemap"></i><a href="/level.html/lop8">Lớp 8</a></li>
-                            <li><i class="fa fa-users"></i><a href="/level.html/lop9">Lớp 9</a></li>
-                            <li><i class="fa fa-sitemap"></i><a href="/level.html/lop10">Lớp 10</a></li>
-                            <li><i class="fa fa-users"></i><a href="/level.html/lop11">Lớp 11</a></li>
-                            <li><i class="fa fa-sitemap"></i><a href="/level.html/lop12">Lớp 12</a></li>
+                            <li><i class="fa fa-users"></i><a href="/admin/level.html/lop1">Lớp 1</a></li>
+                            <li><i class="fa fa-sitemap"></i><a href="/admin/level.html/lop2">Lớp 2</a></li>
+                            <li><i class="fa fa-users"></i><a href="/admin/level.html/lop3">Lớp 3</a></li>
+                            <li><i class="fa fa-sitemap"></i><a href="/admin/level.html/lop4">Lớp 4</a></li>
+                            <li><i class="fa fa-users"></i><a href="/admin/level.html/lop5">Lớp 5</a></li>
+                            <li><i class="fa fa-sitemap"></i><a href="/admin/level.html/lop6">Lớp 6</a></li>
+                            <li><i class="fa fa-users"></i><a href="/admin/level.html/lop7">Lớp 7</a></li>
+                            <li><i class="fa fa-sitemap"></i><a href="/admin/level.html/lop8">Lớp 8</a></li>
+                            <li><i class="fa fa-users"></i><a href="/admin/level.html/lop9">Lớp 9</a></li>
+                            <li><i class="fa fa-sitemap"></i><a href="/admin/level.html/lop10">Lớp 10</a></li>
+                            <li><i class="fa fa-users"></i><a href="/admin/level.html/lop11">Lớp 11</a></li>
+                            <li><i class="fa fa-sitemap"></i><a href="/admin/level.html/lop12">Lớp 12</a></li>
 
                         </ul>
                     </li>

@@ -251,7 +251,7 @@ class HomeController extends Controller
         $id_level=$request->id;
         //echo $id_level;
          DB::table('level')->where('id', '=', $id_level)->delete();
-         return redirect('/level_action.html');
+         return redirect('/admin/level_action.html');
         // return response()->json([ 'thanh cong'=> $id_level]);
         
     }
