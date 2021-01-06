@@ -107,23 +107,23 @@
                                             @if ($data_lesson->currentPage() - 2 < 0)
                                                 @for ($i = $data_lesson->currentPage(); $i <= $data_lesson->lastPage(); $i++)
                                                     @if ($i == $data_lesson->currentPage())
-                                                        <a href="http://127.0.0.1:8000/lesson_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/lesson_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/lesson_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/lesson_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor
                                             @else
-                                                <a href="http://127.0.0.1:8000/lesson_action.html?page=1"><span
+                                                <a href="{{$url_root}}/lesson_action.html?page=1"><span
                                                         class="btn btn-info btn-sm">
                                                         <<< /span></a>
                                                 @for ($i = $data_lesson->currentPage() - 1; $i <= $data_lesson->lastPage(); $i++)
                                                     @if ($i == $data_lesson->currentPage())
-                                                        <a href="http://127.0.0.1:8000/lesson_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/lesson_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/lesson_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/lesson_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor
@@ -132,32 +132,32 @@
                                             @if ($data_lesson->currentPage() == 1)
                                                 @for ($i = $data_lesson->currentPage(); $i < $lastPage; $i++)
                                                     @if ($i == $data_lesson->currentPage())
-                                                        <a href="http://127.0.0.1:8000/lesson_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/lesson_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/lesson_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/lesson_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor
                                                 <a
-                                                    href="http://127.0.0.1:8000/lesson_action.html?page={{ $data_lesson->lastPage() }}"><span
+                                                    href="{{$url_root}}/lesson_action.html?page={{ $data_lesson->lastPage() }}"><span
                                                         class="btn btn-info btn-sm">>></span></a>
                                             @else
-                                                <a href="http://127.0.0.1:8000/lesson_action.html?page=1"><span
+                                                <a href="{{$url_root}}/lesson_action.html?page=1"><span
                                                         class="btn btn-info btn-sm">
                                                         <<< /span></a>
                                                 @for ($i = $data_lesson->currentPage() - 1; $i < $lastPage; $i++)
                                                     @if ($i == $data_lesson->currentPage())
-                                                        <a href="http://127.0.0.1:8000/lesson_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/lesson_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/lesson_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/lesson_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
 
                                                 @endfor
                                                 <a
-                                                    href="http://127.0.0.1:8000/lesson_action.html?page={{ $data_lesson->lastPage() }}"><span
+                                                    href="{{$url_root}}/lesson_action.html?page={{ $data_lesson->lastPage() }}"><span
                                                         class="btn btn-info btn-sm">>></span></a>
                                             @endif
                                         @endif

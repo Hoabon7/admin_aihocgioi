@@ -112,15 +112,15 @@
                                             @if ($data_book->currentPage() - 2 < 0)
                                                 @for ($i = $data_book->currentPage(); $i <= $data_book->lastPage(); $i++)
                                                     @if ($i == $data_book->currentPage())
-                                                        <a href="http://127.0.0.1:8000/book_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/book_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/book_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/book_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
                                                 @endfor
                                             @else
-                                                <a href="http://127.0.0.1:8000/book_action.html?page=1"><span
+                                                <a href="{{$url_root}}/book_action.html?page=1"><span
                                                         class="btn btn-info btn-sm">
                                                         <<</span></a>
                                                 @for ($i = $data_book->currentPage() - 1; $i <= $data_book->lastPage(); $i++)
@@ -145,24 +145,24 @@
                                                     @endif
                                                 @endfor
                                                 <a
-                                                    href="http://127.0.0.1:8000/book_action.html?page={{ $data_book->lastPage() }}"><span
+                                                    href="{{$url_root}}/book_action.html?page={{ $data_book->lastPage() }}"><span
                                                         class="btn btn-info btn-sm">>></span></a>
                                             @else
-                                                <a href="http://127.0.0.1:8000/book_action.html?page=1"><span
+                                                <a href="{{$url_root}}/book_action.html?page=1"><span
                                                         class="btn btn-info btn-sm">
                                                         <<</span></a>
                                                 @for ($i = $data_book->currentPage() - 1; $i < $lastPage; $i++)
                                                     @if ($i == $data_book->currentPage())
-                                                        <a href="http://127.0.0.1:8000/book_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/book_action.html?page={{ $i }}"><span
                                                                 class="btn btn-primary btn-sm">{{ $i }}</span></a>
                                                     @else
-                                                        <a href="http://127.0.0.1:8000/book_action.html?page={{ $i }}"><span
+                                                        <a href="{{$url_root}}/book_action.html?page={{ $i }}"><span
                                                                 class="btn btn-info btn-sm">{{ $i }}</span></a>
                                                     @endif
 
                                                 @endfor
                                                 <a
-                                                    href="http://127.0.0.1:8000/book_action.html?page={{ $data_book->lastPage() }}"><span
+                                                    href="{{$url_root}}/book_action.html?page={{ $data_book->lastPage() }}"><span
                                                         class="btn btn-info btn-sm">>></span></a>
                                             @endif
                                         @endif

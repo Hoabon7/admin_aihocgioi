@@ -251,7 +251,7 @@ class HomeController extends Controller
         $id_level=$request->id;
         //echo $id_level;
          DB::table('level')->where('id', '=', $id_level)->delete();
-         return redirect('/admin/level_action.html');
+         return redirect("/level_action.html");
         // return response()->json([ 'thanh cong'=> $id_level]);
         
     }
@@ -262,7 +262,6 @@ class HomeController extends Controller
         // $params = ['index' => 'bank'];
         // $response = $client->indices()->getSettings($params);
         // //$response = $client->indices()->getSettings($params);
-        
         $params = [
             'index' => 'chapter',
             'body'  => [
@@ -343,7 +342,6 @@ class HomeController extends Controller
     }
     
     public function updatelevelChapterLessonAndContent(Request $request){
-      
         $rules = array(
             // 'id_level'   =>'required',
             // 'id_book'    =>  'required',

@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <?php $root_url="http://127.0.0.1:8000/" ?>
+    <?php $root_url="{{$url_root}}/" ?>
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
