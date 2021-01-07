@@ -1,8 +1,9 @@
 jQuery(document).ready(function($) {
+    var root_url="/admin/public";
         $(document).on('click', '.edit', function() {
             var id_level = $(this).attr('id');
             $.ajax({
-                "url": '/editlevel/' + id_level,
+                "url":  root_url+'/editlevel/' + id_level,
                 "type": "GET",
                 "dataType": "JSON",
                 success: function(data) {
@@ -15,7 +16,7 @@ jQuery(document).ready(function($) {
         $('#form_edit_level').on('submit', function(event) {
             //alert('hoa');
             event.preventDefault(); //xóa bỏ các kiểu gửi mặc định
-            var url_edit = "/updatelevel";
+            var url_edit =  root_url+"/updatelevel";
             //console.log($(this).serialize());
             $.ajax({
                 url: url_edit,
@@ -53,7 +54,7 @@ jQuery(document).ready(function($) {
         })
         $('#form_add_level').on('submit', function(event) {
             event.preventDefault(); //xóa bỏ các kiểu gửi mặc định
-            var url_add = "/addlevel";
+            var url_add =  root_url+"/addlevel";
             $.ajax({
                 url: url_add,
                 //headers: {'X-CSRF-TOKEN': token},

@@ -1,10 +1,11 @@
 // $.noConflict();
 jQuery(document).ready(function($){
+    var root_url="/admin/public";
     $('.edit').click(function(){
         var id_content=$(this).attr('id');
         //alert(id_content);    
         $.ajax({
-            "url": '/editlevelchaptercontent/' + id_content,
+            "url": root_url+"/editlevelchaptercontent/" + id_content,
             "type": "GET",
             "dataType": "JSON",
             success:function(data){
@@ -27,7 +28,7 @@ jQuery(document).ready(function($){
         var id_content=$(this).attr('id');
        // alert(id_content);    
         $.ajax({
-            "url": '/getcontent/' + id_content,
+            "url": root_url+'/getcontent/' + id_content,
             "type": "GET",
             "dataType": "JSON",
             success:function(data){
@@ -41,7 +42,7 @@ jQuery(document).ready(function($){
     $('#form_edit_book').on('submit', function(event) {
         // alert('hoa');
         event.preventDefault(); //xóa bỏ các kiểu gửi mặc định
-        var url_edit = "/updatelevelchapterlessonandcontent";
+        var url_edit =  root_url+"/updatelevelchapterlessonandcontent";
         //console.log($(this).serialize());
         $.ajax({
             url: url_edit,
@@ -72,7 +73,7 @@ jQuery(document).ready(function($){
     });
     $('#form_edit_content').on('submit', function(event) {
         event.preventDefault(); //xóa bỏ các kiểu gửi mặc định
-        var url_edit = "/updatecontentineachlevel";
+        var url_edit =  root_url+"/updatecontentineachlevel";
         $.ajax({
             url: url_edit,
             //headers: {'X-CSRF-TOKEN': token},
