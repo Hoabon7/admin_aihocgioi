@@ -38,6 +38,11 @@ use Elasticsearch\ClientBuilder;
      //update form for each level
      Route::post('updatelevelchapterlessonandcontent',[HomeController::class,'updatelevelChapterLessonAndContent'])->name('updatelevelchapterlessonandcontent');
 
+     //update form edit content for each level;
+     
+     Route::post('updatecontentineachlevel',[HomeController::class,'updateContentInEachLevel'])->name('updatecontentineachlevel');
+
+
       //add form
       Route::post('addlevel',[HomeController::class,'addLevel'])->name('addlevel');
       //delete data

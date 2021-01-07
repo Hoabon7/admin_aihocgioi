@@ -103,9 +103,9 @@ class LevelController extends Controller
                 $data['id_chapter']='';
                 $data['id_level']=$para_request['id_level'];
                 return view('findContent',compact("data"));
-                echo "<pre>";
-               var_dump($data_level1);
-               echo "</pre>";
+            //     echo "<pre>";
+            //    var_dump($data_level1);
+            //    echo "</pre>";
            }else{
                 $data_level1=$this->listContent_after_have_filer_chapter($para_request['selectBook'],$para_request['selectChapter'],$para_request['id_level']);
                 //chapter into <div> input
@@ -117,9 +117,9 @@ class LevelController extends Controller
                 $data['list_book']=$this->listBook($para_request['id_level']);
                 $data['id_level']=$para_request['id_level'];
                 return view('findContent',compact("data"));
-                echo "<pre>";
-                var_dump($data_level1);
-                echo "</pre>";
+                // echo "<pre>";
+                // var_dump($data_level1);
+                // echo "</pre>";
 
            }  
     }

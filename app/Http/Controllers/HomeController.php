@@ -215,11 +215,31 @@ class HomeController extends Controller
             ->update(['content.id_lesson'=>$request->content_id_lesson,
                     'content.title'=>$request->content_title,
                     'content.content'=>$request->content_content
-                    
                     ]
                     );
             return response()->json([  $request->all() ]);
         }
+    }
+
+    public function updateContentInEachLevel(Request $request){
+        $rules = array(
+            'id_content_detail'   =>'required',
+            'content_book'   =>'required',
+        );
+        $error = Validator::make($request->all(), $rules);
+        if($error->fails())
+        {
+            return response()->json(['errors' => $error->errors()->all()]);
+        }else{
+            DB::table('content')  
+            ->where('content.id', $request->id_content_detail)
+            ->update([
+                    'content.content'=>$request->content_book
+                    ]
+                    );
+            return response()->json([  $request->all() ]);
+        }
+        
     }
 
     public function addLevel(Request $request){
@@ -322,7 +342,7 @@ class HomeController extends Controller
     public function getContent(Request $request){
         $id_content=$request->id;
         $data=DB::table('content')
-        ->select('content.content')
+        ->select('content.content','content.id')
         ->where('content.id','=',$id_content)
         ->get();
         return response($data);
