@@ -16,11 +16,11 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form id="form_edit_book" name="form_edit_book" method="post" class="form-horizontal">
+                                <form class="form_edit_book" name="form_edit_book" method="post" class="form-horizontal">
                                     @csrf
                                     <div class="row form-group">
                                         <div class="col-12 col-md-9"><input type="hidden" class="form-control"
-                                                type="text" name="id_level" id="id_level" size="2"></div>
+                                                type="text" name="id_level" class="id_level" size="2"></div>
                                         <div class="col-12 col-md-9"><input
                                                 class="form-control" type="hidden" name="id_book" id="id_book"></div>
                                         <div class="col-12 col-md-9"><label for="">Tên Lớp</label><input
@@ -165,8 +165,8 @@
                             <div class="card-header">
                                 <strong class="card-title">Danh sách</strong>
                             </div>
-                            <div class="table-stats order-table ov-h">
-                                <table class="table ">
+                            <div class="table-stat">
+                                <table id="table_findContent" class="table ">
                                     <thead>
                                         <tr>
                                             <th class="serial">Mã Lớp</th>
@@ -293,7 +293,24 @@
     </div>
 @stop
 
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="{{asset('Assets/Js/ajaxcontentlevel.js')}}"></script>
+
+<script>
+     $(document).ready( function () {
+        $('#table_findContent').DataTable({
+            "bProcessing": true,
+            "sAutoWidth": true,
+            "bDestroy":true,
+            "sPaginationType": "bootstrap", // full_numbers
+            "iDisplayStart ": 10,
+            "iDisplayLength": 10,
+            "bPaginate": false, //hide pagination
+            "bFilter": true, //hide Search bar
+            "bInfo": false, // hide showing entries
+        });
+    } );
+</script>
 
 

@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    var root_url="/admin/public";
+    var root_url="";
         $(document).on('click', '.edit', function() {
             var id_level = $(this).attr('id');
             $.ajax({

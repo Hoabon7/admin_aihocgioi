@@ -65,8 +65,8 @@
                             <div class="card-header">
                                 <strong class="card-title">Danh Sách Các Chương</strong>
                             </div>
-                            <div class="table-stats order-table ov-h">
-                                <table class="table ">
+                            <div class="table-stat">
+                                <table id="table_all_chapter" class="table ">
                                     <thead>
                                         <tr>
                                             <th class="serial">Mã Chương</th>
@@ -250,3 +250,22 @@
     })
 
 </script>
+
+<script>
+    $(document).ready( function () {
+       $('#table_all_chapter').DataTable({
+           "bProcessing": true,
+           "sAutoWidth": true,
+           "bDestroy":true,
+           "sPaginationType": "bootstrap", // full_numbers
+           "iDisplayStart ": 10,
+           "iDisplayLength": 10,
+           "bPaginate": false, //hide pagination
+           "bFilter": true, //hide Search bar
+           "bInfo": false, // hide showing entries
+           
+       });
+     
+   } );
+</script>
+

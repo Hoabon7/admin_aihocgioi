@@ -51,7 +51,6 @@ use Elasticsearch\ClientBuilder;
       //level
       Route::get('level.html/{id}',[LevelController::class,'level_1']);
       
-
       //elasticsearch
       Route::get('test/{name}',[HomeController::class,'testES']);//tim kiem
       Route::get('addes',[HomeController::class,'addES']);
@@ -60,7 +59,8 @@ use Elasticsearch\ClientBuilder;
 
       Route::get('/filecontent',[LevelController::class,'findContent'])->name('filecontent');
 
-       
+    //  Route::get('/update/{idlevel}/{idbook}/idchapternew/{idchapternew}/{idlesson}',[HomeController::class,'updateNow']);
+    //  Route::get('/fix/{idlevel}/{idbook}/{idlesson}',[HomeController::class,'fix']);
  });
 
  

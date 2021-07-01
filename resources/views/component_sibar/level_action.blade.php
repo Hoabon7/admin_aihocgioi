@@ -108,8 +108,8 @@
                             <div class="card-header">
                                 <strong class="card-title">Danh Sách Cấp Học</strong>
                             </div>
-                            <div class="table-stats order-table ov-h">
-                                <table class="table">
+                            <div class="table-stat">
+                                <table id="table_all_level" class="table">
                                     <thead>
                                         <tr>
                                             <th class="serial">#</th>
@@ -122,7 +122,7 @@
                                         @foreach ($data_level as $value)
                                             <tr>
                                                 <td class="serial">{{ $value->id_ref }}</td>
-                                                <td id="id_level">{{ $value->id }} </td>
+                                                <td class="id_level">{{ $value->id }} </td>
                                                 <td>{{ $value->name_level }}</td>
                                                 <td>
                                                     <button type="button" class="edit btn btn-primary btn-sm "
@@ -224,3 +224,20 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="{{asset('Assets/Js/qlds.js')}}"></script>
+
+<script>
+     $(document).ready( function () {
+        $('#table_all_level').DataTable({
+            "bProcessing": true,
+            "sAutoWidth": true,
+            "bDestroy":true,
+            "sPaginationType": "bootstrap", // full_numbers
+            "iDisplayStart ": 10,
+            "iDisplayLength": 10,
+            "bPaginate": false, //hide pagination
+            "bFilter": true, //hide Search bar
+            "bInfo": false, // hide showing entries
+        });
+      
+    } );
+</script>

@@ -44,7 +44,7 @@ class LevelController extends Controller
             ->where('level.id','=',$idLevel)
             ->where('book.id','=',$id_book)
             ->orderByDesc('id_ref')
-            ->paginate(15);
+            ->paginate(20);
             return $data;
 
     }
@@ -59,7 +59,7 @@ class LevelController extends Controller
         ->where('book.id','=',$idBook)
         ->where('chapter.id','=',$idChapter)
         ->orderByDesc('id_ref')
-        ->paginate(15);
+        ->paginate(20);
         return $data;
     }
 

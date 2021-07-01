@@ -31,14 +31,14 @@ class HomeController extends Controller
             $data_level=DB::table('level')
             ->select('level.id','level.name_level','level.id_ref')
             ->orderByDesc('id_ref')
-            ->paginate(10);
+            ->paginate(20);
             //return response($data_level);
             return view('component_sibar.level_action')->with('data_level',$data_level);
     }
     public function book_action(){
             $data_book=DB::table('book')
             ->select('book.id','book.type_book','book.name_book','book.type_name','book.id_level')
-            ->paginate(10);
+            ->paginate(20);
             //var_dump($data_book);
             //return response($data_level);
             return view('component_sibar.book_action')->with('data_book',$data_book);
@@ -46,7 +46,7 @@ class HomeController extends Controller
     public function chapter_action(){
         $data_chapter=DB::table('chapter')
         ->select('chapter.id','chapter.id_book','chapter.name_chapter')
-        ->paginate(10);
+        ->paginate(20);
         //return response($data_chapter);
         return view('component_sibar.chapter_action')->with('data_chapter',$data_chapter);
         
@@ -54,7 +54,7 @@ class HomeController extends Controller
     public function lesson_action(){
         $data_lesson=DB::table('lesson')
         ->select('lesson.id','lesson.name_lesson','lesson.id_chapter')
-        ->paginate(10);
+        ->paginate(20);
         //return response($data_lesson);
         return view('component_sibar.lesson_action')->with('data_lesson',$data_lesson);
 
@@ -63,7 +63,7 @@ class HomeController extends Controller
     public function content_action(){
         $data_content=DB::table('content')
         ->select('content.id','content.title','content.id_lesson','content.content')
-        ->paginate(10);
+        ->paginate(20);
         return view('component_sibar.content_action')->with('data_content',$data_content);
 
         
@@ -400,6 +400,42 @@ class HomeController extends Controller
 
             return response()->json([  $request->all() ]);
         }
+    }
+
+    public function updateNow(Request $request){
+        
+        $idLevel=$request->idlevel;
+        $idBook=$request->idbook;
+        $idChapTerNew=$request->idchapternew;
+        $idLesson=$request->idlesson;
+        DB::table('lesson')  
+            ->join('chapter','chapter.id','=','lesson.id_chapter')
+            ->join('book','book.id','=','chapter.id_book')
+            ->join('level','level.id','=','book.id_level')
+            ->where('level.id','=', $idLevel)
+            ->where('book.id','=', $idBook)
+            ->where('lesson.id','>=', $idLesson)
+            ->update([
+                'lesson.id_chapter'=>$idChapTerNew
+            ]);
+       
+    }
+
+    public function fix(Request $request){
+        $idLevel=$request->idlevel;
+        $idBook=$request->idbook;
+        
+        $idLesson=$request->idlesson;
+        DB::table('lesson')  
+            ->join('chapter','chapter.id','=','lesson.id_chapter')
+            ->join('book','book.id','=','chapter.id_book')
+            ->join('level','level.id','=','book.id_level')
+            ->where('level.id','=', $idLevel)
+            ->where('book.id','=', $idBook)
+            ->where('lesson.id','>=', $idLesson)
+            ->update([
+                'lesson.id_chapter'=>2333
+            ]);
     }
     
         

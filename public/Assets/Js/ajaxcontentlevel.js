@@ -1,6 +1,9 @@
 // $.noConflict();
+
+
+
 jQuery(document).ready(function($){
-    var root_url="/admin/public";
+    var root_url="";
     $('.edit').click(function(){
         var id_content=$(this).attr('id');
         //alert(id_content);    
@@ -9,7 +12,7 @@ jQuery(document).ready(function($){
             "type": "GET",
             "dataType": "JSON",
             success:function(data){
-                 $('#id_level').val(data[0]['id_level']);//lấy dữ liệu từ csdl đổ vào trong phần input của
+                 $('.id_level').val(data[0]['id_level']);//lấy dữ liệu từ csdl đổ vào trong phần input của
                  $('#id_book').val(data[0]['id_book']);
                  $('#name_level').val(data[0]['name_level']);
                  $('#id_chapter').val(data[0]['id_chapter']);
@@ -39,38 +42,7 @@ jQuery(document).ready(function($){
             }
         });
     });
-    $('#form_edit_book').on('submit', function(event) {
-        // alert('hoa');
-        event.preventDefault(); //xóa bỏ các kiểu gửi mặc định
-        var url_edit =  root_url+"/updatelevelchapterlessonandcontent";
-        //console.log($(this).serialize());
-        $.ajax({
-            url: url_edit,
-            //headers: {'X-CSRF-TOKEN': token},
-            method: "POST",
-            data: $(this).serialize(),
-            dataType: "json",
-            success: function(data) {
-                //console.log(data);
-                //console.log(data);
-                 $('.modal-footer>button').click();
-                 $('.close').attr("enabled", true);
-                //console.log(data[0]['id_content'])
-                 var row = $(".table-stats button[id='" + data[0]['id_content'] + "']").parents("tr")[0];
-                 console.log(row)
-                $(row).after(addRow(data[0]['id_level'], data[0]['id_book'],
-                    data[0]['id_chapter'],data[0]['type_name'],data[0]['name_chapter'],data[0]['id_lesson'],
-                    data[0]['name_lesson'],data[0]['id_content'],data[0]['title_content']));
-                 $(row).remove();
-            },  
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(textStatus);
-                console.log(errorThrown);
-                console.log(jqXHR);
-            }
-
-        });
-    });
+   
     $('#form_edit_content').on('submit', function(event) {
         event.preventDefault(); //xóa bỏ các kiểu gửi mặc định
         var url_edit =  root_url+"/updatecontentineachlevel";
@@ -87,6 +59,40 @@ jQuery(document).ready(function($){
                  $('.close').attr("enabled", true);
                 
                 
+            },  
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus);
+                console.log(errorThrown);
+                console.log(jqXHR);
+            }
+
+        });
+    });
+    $('.form_edit_book').on('submit', function(event) {
+        // alert('hoa');
+        
+        event.preventDefault(); //xóa bỏ các kiểu gửi mặc định
+        var url_edit ="/updatelevelchapterlessonandcontent";
+        //console.log($(this).serialize());
+        $.ajax({
+            url: url_edit,
+            //headers: {'X-CSRF-TOKEN': token},
+            method: "POST",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function(data) {
+                //console.log(data);
+                //console.log(data);
+                 $('.modal-footer>button').click();
+                 $('.close').attr("enabled", true);
+               
+               
+                var row = $(".table-stat button[id='" + data[0]['id_content'] + "']").parents("tr")[0];
+                 console.log(row)
+                $(row).after(addRow(data[0]['id_level'], data[0]['id_book'],
+                    data[0]['id_chapter'],data[0]['type_name'],data[0]['name_chapter'],data[0]['id_lesson'],
+                    data[0]['name_lesson'],data[0]['id_content'],data[0]['title_content']));
+                 $(row).remove();
             },  
             error: function(jqXHR, textStatus, errorThrown) {
                 console.log(textStatus);
